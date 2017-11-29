@@ -14,13 +14,21 @@
 
 	</head>
 	<body <?php body_class( 'site' ); ?>>
-		<header class="site-header" role="banner">
-			<h1 class="header-logo"><a href="/">Paul Shryock</a></h1>
+		<header id="masthead" class="site-header" role="banner">
+			<?php
+			if ( is_home() || is_front_page() ) : ?>
+				<h1 class="header-logo"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+			<?php else : ?>
+				<p class="header-logo"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
+			<?php
+			endif; ?>
 			<nav class="header-nav">
-				<ul>
-					<li><a href="/">Index</a></li>
-					<li><a href="article.php">Article</a></li>
-					<li><a href="page.php">Page</a></li>
-				</ul>
+				<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Menu', 'paul-shryock-2018' ); ?></button>
+				<?php
+					wp_nav_menu( array(
+						'theme_location' => 'menu-1',
+						'menu_id'        => 'primary-menu',
+					) );
+				?>
 			</nav><!-- .header-nav -->
 		</header><!-- .site-header -->
