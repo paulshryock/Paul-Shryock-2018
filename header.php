@@ -6,12 +6,6 @@
 		<meta http-equiv="x-ua-compatible" content="ie=edge">
 		<link rel="profile" href="http://gmpg.org/xfn/11">
 		<?php wp_head(); ?>
-
-		<title>Marketing Consultant From New Jersey | Paul Shryock</title>
-		<meta name="description" content="">
-		<link rel="stylesheet" href="css/reset.css">
-		<link rel="stylesheet" href="css/style.css">
-
 	</head>
 	<body <?php body_class( 'site' ); ?>>
 		<header id="masthead" class="site-header" role="banner">
