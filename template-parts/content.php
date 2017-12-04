@@ -18,15 +18,11 @@
 			the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
 		endif;
 
-		if ( 'post' === get_post_type() ) : ?>
-		<div class="entry-meta">
-			<?php paul_shryock_2018_posted_on(); ?>
-		</div><!-- .entry-meta -->
-		<?php
-		endif; ?>
+		// Add featured image ?>
+
 	</header><!-- .entry-header -->
 
-	<div class="entry-content">
+	<section class="entry-content">
 		<?php
 			the_content( sprintf(
 				wp_kses(
@@ -46,7 +42,7 @@
 				'after'  => '</div>',
 			) );
 		?>
-	</div><!-- .entry-content -->
+	</section><!-- .entry-content -->
 
 	<footer class="entry-footer">
 		<?php paul_shryock_2018_entry_footer(); ?>
