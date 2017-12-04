@@ -51,3 +51,4 @@
 				?>
 			</nav><!-- .header-nav -->
 		</header><!-- .site-header -->
+		<main class="site-main<?php if ( is_single() ) { echo ' has-sidebar'; } elseif ( is_page() ) { echo ' content-thin'; } ?>"><!-- Can these move into the body class, and maybe move to functions.php? -->
