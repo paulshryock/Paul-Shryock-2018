@@ -1,3 +1,3 @@
-# HTML Boilerplate
+# Paul Shryock 2018
 
-Custom boilerplate with CSS reset, ready to start from scratch.
+WordPress theme for Paul Shryock's new website, to launch in 2018.
