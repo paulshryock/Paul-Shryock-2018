@@ -42,6 +42,12 @@ if ( ! function_exists( 'paul_shryock_2018_setup' ) ) :
 		 */
 		add_theme_support( 'post-thumbnails' );
 
+		/*
+		 * Enable support for Jetpack testimonials.
+		 */
+		add_theme_support( 'jetpack-testimonial' );
+		add_post_type_support( 'jetpack-testimonial', 'excerpt' );
+
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus( array(
 			'menu-1' => esc_html__( 'Primary', 'paul-shryock-2018' ),
@@ -117,10 +123,13 @@ add_action( 'widgets_init', 'paul_shryock_2018_widgets_init' );
  * Enqueue scripts and styles.
  */
 function paul_shryock_2018_scripts() {
-	wp_enqueue_style( 'paul-shryock-2018-style', get_stylesheet_uri() );
+	wp_enqueue_style( 'paul-shryock-2018-load', get_stylesheet_uri() );
+	wp_enqueue_style( 'paul-shryock-2018-google-fonts', 'https://fonts.googleapis.com/css?family=Roboto:400,400i,700', false );
+	wp_enqueue_style( 'paul-shryock-2018-reset', get_template_directory_uri() . '/css/reset.css' );
+	wp_enqueue_style( 'paul-shryock-2018-style', get_template_directory_uri() . '/css/style.css' );
 
+	wp_enqueue_script( 'paul-shryock-2018-script', get_template_directory_uri() . '/js/script.js', array(), '20151215', true );
 	wp_enqueue_script( 'paul-shryock-2018-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
-
 	wp_enqueue_script( 'paul-shryock-2018-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
