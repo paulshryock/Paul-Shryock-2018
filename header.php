@@ -34,11 +34,11 @@
 			<?php
 			endif;
 
-			$description = get_bloginfo( 'description', 'display' );
-			if ( $description || is_customize_preview() ) : ?>
-				<p class="site-description"><?php echo $description; /* WPCS: xss ok. */ ?></p>
+			// $description = get_bloginfo( 'description', 'display' );
+			// if ( $description || is_customize_preview() ) : ?>
+				<!--<p class="site-description">--><?php // echo $description; /* WPCS: xss ok. */ ?><!--</p>-->
 			<?php
-			endif; ?>
+			// endif; ?>
 
 			<nav id="site-navigation" class="header-nav">
 				<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Menu', 'paul-shryock-2018' ); ?></button>
