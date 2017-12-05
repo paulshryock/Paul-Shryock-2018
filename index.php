@@ -50,5 +50,5 @@ get_header(); ?>
 	</section><!-- .main-content -->
 
 <?php
-get_sidebar();
+if ( is_single() ) { get_sidebar(); }
 get_footer();
