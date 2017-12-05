@@ -68,7 +68,8 @@ h1,
 h2,
 h3,
 h4,
-strong {
+strong,
+.header-logo {
 	font-weight: bold;
 }
 
