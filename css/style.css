@@ -192,13 +192,18 @@ figcaption,
 	color: #ccc;
 }
 
+button {
+	border: 2px outset #ccc;
+}
+
 blockquote {
 	border-left: 0.25em solid #ccc;
 }
 
 /* Lighter Gray #eee */
 
-input:disabled {
+input:disabled,
+button {
 	background: #eee;
 }
 
