@@ -294,21 +294,21 @@ h1, h2, h3, h4, h5, h6 {
 	clear: both;
 }
 
-p {
+/*p {
 	margin-bottom: 1.5em;
-}
+}*/
 
 dfn, cite, em, i {
 	font-style: italic;
 }
 
-blockquote {
+/*blockquote {
 	margin: 0 1.5em;
 }
 
 address {
 	margin: 0 0 1.5em;
-}
+}*/
 
 pre {
 	background: #eee;
@@ -324,8 +324,8 @@ pre {
 
 code, kbd, tt, var {
 	font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
-	font-size: 15px;
-	font-size: 0.9375rem;
+	/*font-size: 15px;*/
+	/*font-size: 0.9375rem;*/
 }
 
 abbr, acronym {
@@ -368,9 +368,9 @@ hr {
 	margin-bottom: 1.5em;
 }
 
-ul, ol {
+/*ul, ol {
 	margin: 0 0 1.5em 3em;
-}
+}*/
 
 ul {
 	list-style: disc;
@@ -407,7 +407,7 @@ figure {
 }
 
 table {
-	margin: 0 0 1.5em;
+	/*margin: 0 0 1.5em;*/
 	width: 100%;
 }
 
@@ -594,7 +594,7 @@ a:hover, a:active {
 .site-main .comment-navigation, .site-main
 .posts-navigation, .site-main
 .post-navigation {
-	margin: 0 0 1.5em;
+	/*margin: 0 0 1.5em;*/
 	overflow: hidden;
 }
 
@@ -711,11 +711,11 @@ a:hover, a:active {
 /*--------------------------------------------------------------
 # Widgets
 --------------------------------------------------------------*/
-.widget {
+/*.widget {
 	margin: 0 0 1.5em;
-	/* Make sure select elements fit in widgets. */
-}
+}*/
 
+/* Make sure select elements fit in widgets. */
 .widget select {
 	max-width: 100%;
 }

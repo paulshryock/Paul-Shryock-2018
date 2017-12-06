@@ -415,6 +415,35 @@ article header,
 
 }
 
+/* ---------- Display Properties ---------- */
+
+.button {
+	display: inline-block;
+}
+
+.cat-links,
+.tags-links,
+.edit-link {
+	display: block;
+}
+
+/* ---------- Position Properties ---------- */
+
+textarea {
+	vertical-align: top;
+}
+
+html {
+	overflow: hidden;
+}
+
+.site,
+textarea {
+	overflow: auto;
+}
+
+/* ---------- Float Properties ---------- */
+
 /* ---------- Flexbox ---------- */
 
 .header-nav,
@@ -630,29 +659,6 @@ article header,
 	}
 
 }
-
-/* ---------- Display Properties ---------- */
-
-.button {
-	display: inline-block;
-}
-
-/* ---------- Position Properties ---------- */
-
-textarea {
-	vertical-align: top;
-}
-
-html {
-	overflow: hidden;
-}
-
-.site,
-textarea {
-	overflow: auto;
-}
-
-/* ---------- Float Properties ---------- */
 
 /* ---------- Animated Transitions ---------- */
 
