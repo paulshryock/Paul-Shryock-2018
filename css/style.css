@@ -417,6 +417,7 @@ h4 {
 	margin: 0 0 0.5em;
 }
 
+.header-nav li + li,
 .entry-footer,
 .post-navigation,
 .comment + .comment,
@@ -439,6 +440,14 @@ article header,
 
 .comments-area {
 	margin: 2em 0 0;
+}
+
+@media screen and (min-width: 37.5rem) { /* 600 px */
+
+	.header-nav li + li {
+		margin: 0;
+	}
+
 }
 
 @media screen and (min-width: 48rem) { /* 768 px */
@@ -470,6 +479,16 @@ article header,
 }
 
 /* ---------- Position Properties ---------- */
+
+.site-header {
+	position: relative;
+}
+
+.menu-toggle {
+	position: absolute;
+	top: 1em;
+	right: 1em;
+}
 
 textarea {
 	vertical-align: top;
