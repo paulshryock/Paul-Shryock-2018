@@ -44,7 +44,10 @@
 		?>
 	</section><!-- .entry-content -->
 
+	<?php if ( is_singular() ) : ?>
 	<footer class="entry-footer">
 		<?php paul_shryock_2018_entry_footer(); ?>
 	</footer><!-- .entry-footer -->
+	<?php endif; ?>
+	
 </article><!-- #post-<?php the_ID(); ?> -->
