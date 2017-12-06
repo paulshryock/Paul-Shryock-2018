@@ -18,9 +18,14 @@
 			the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
 		endif; ?>
 
-		<a href="<?php echo esc_url( get_permalink() ); ?>" alt="<?php the_title(); ?>">
-			<?php the_post_thumbnail(); ?>
-		</a>
+		<?php
+		if ( is_singular() ) :
+			the_post_thumbnail();
+		else :
+		echo '<a href="' . esc_url( get_permalink() ) . '" alt="' . get_the_title() . '">';
+			the_post_thumbnail();
+		echo '</a>';
+		endif; ?>
 
 	</header><!-- .entry-header -->
 
