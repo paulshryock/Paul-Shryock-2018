@@ -28,7 +28,8 @@ textarea {
 	font-size: 100%;
 }
 
-h4 {
+h4,
+.blog .entry-title {
 	font-size: 112.5%;
 }
 
