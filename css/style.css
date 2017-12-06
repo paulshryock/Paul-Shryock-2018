@@ -28,8 +28,7 @@ textarea {
 	font-size: 100%;
 }
 
-h4,
-.blog .entry-title {
+h4 {
 	font-size: 112.5%;
 }
 
@@ -50,6 +49,14 @@ h1,
 @media screen and (min-width: 26rem) { /* 416 px */
 
 	body {
+		font-size: 112.5%;
+	}
+
+}
+
+@media screen and (min-width: 37.5rem) { /* 600 px */
+
+	.blog .entry-title {
 		font-size: 112.5%;
 	}
 
