@@ -20,11 +20,17 @@
 		if ( is_singular() ) :
 			the_title( '<h1 class="entry-title">', '</h1>' );
 		else :
-			the_title( '<h2 class="entry-title">', '</h2>' );
+			the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
 		endif;
 
 		if ( has_post_thumbnail() ) :
-			the_post_thumbnail();
+			if ( is_singular() ) :
+				the_post_thumbnail();
+			else :
+			echo '<a href="' . esc_url( get_permalink() ) . '" alt="' . get_the_title() . '">';
+				the_post_thumbnail();
+			echo '</a>';
+			endif;
 		endif; ?>
 
 	</header><!-- .entry-header -->
