@@ -374,6 +374,10 @@ button,
 	padding: 1em;
 }
 
+.blog .entry-header + .entry-content {
+	padding: 0 1em 1em;
+}
+
 .main-sidebar,
 .entry-footer,
 .post-navigation {
