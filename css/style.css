@@ -276,6 +276,16 @@ a:active {
 	background: #0085ca;
 }
 
+.blog .entry-link:hover ~ * img,
+.blog .entry-link:focus ~ * img {
+	-webkit-filter: sepia(1);
+	filter: sepia(1);
+}
+
+.entry-header .entry-link {
+	background: none;
+}
+
 :focus {
 	outline: #0085ca solid 0.125rem; /* 2 px */
 }
@@ -344,12 +354,14 @@ input[type="search"] {
 }
 
 input,
-textarea {
+textarea,
+.entry-link {
   width : 100%;
 }
 
 html,
-.site {
+.site,
+.entry-link {
 	height: 100%;
 }
 
@@ -427,7 +439,8 @@ blockquote:last-child,
 form:last-child,
 figcaption:last-child,
 .widget:last-child,
-.cta:last-child {
+.cta:last-child,
+.blog .entry-title {
 	margin: 0;
 }
 
@@ -502,12 +515,17 @@ article header,
 
 /* ---------- Position Properties ---------- */
 
-.site-header {
+.site-header,
+.entry-header {
 	position: relative;
 }
 
-.menu-toggle {
+.menu-toggle,
+.entry-link {
 	position: absolute;
+}
+
+.menu-toggle {
 	top: 1em;
 	right: 1em;
 }
@@ -525,8 +543,14 @@ textarea {
 	overflow: auto;
 }
 
+/* Z Index */
+
 .entry-title {
 	z-index: 1;
+}
+
+.entry-link {
+	z-index: 2;
 }
 
 /* ---------- Float Properties ---------- */
@@ -775,6 +799,10 @@ textarea {
 
 a {
 	transition: color 0.25s ease;
+}
+
+.entry-header img {
+	transition: filter 0.25s ease;
 }
 
 /* ---------- Browser Fixes and Accessibility ---------- */
