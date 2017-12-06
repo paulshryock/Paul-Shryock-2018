@@ -14,7 +14,7 @@
 
 get_header(); ?>
 
-	<section class="main-content">
+	<section class="main-content"><?php get_search_form(); ?>
 
 		<?php
 		if ( have_posts() ) :
