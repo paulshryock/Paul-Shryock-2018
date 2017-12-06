@@ -133,6 +133,7 @@ ul ul {
 }
 
 nav ul,
+.widget ul,
 .comment-list,
 .comment-list .children {
 	list-style: none;
@@ -342,6 +343,7 @@ img {
 
 /* Padding */
 
+.widget ul,
 .comment-list,
 .comment .children {
 	padding: 0;
@@ -486,26 +488,32 @@ textarea {
 
 /* ---------- Flexbox ---------- */
 
-.header-nav,
-.header-nav ul {
+.header-nav.toggled ul {
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
 }
 
 .header-nav ul {
-	-webkit-box-flex: 1;
-	-ms-flex-positive: 1;
-	flex-grow: 1;
 	-webkit-box-orient: vertical;
 	-webkit-box-direction: normal;
 	-ms-flex-direction: column;
 	flex-direction: column;
 }
 
-@media screen and (min-width: 26rem) { /* 416 px */
+@media screen and (min-width: 37.5rem) { /* 600 px */
+
+	.header-nav,
+	.header-nav ul {
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+	}
 
 	.header-nav ul {
+		-webkit-box-flex: 1;
+		-ms-flex-positive: 1;
+		flex-grow: 1;
 		-webkit-box-orient: horizontal;
 		-webkit-box-direction: normal;
 		-ms-flex-direction: row;
@@ -513,6 +521,13 @@ textarea {
 		-webkit-box-pack: justify;
 		-ms-flex-pack: justify;
 		justify-content: space-between;
+	}
+
+	.header-nav ul ul {
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		-ms-flex-direction: column;
+		flex-direction: column;
 	}
 
 }
