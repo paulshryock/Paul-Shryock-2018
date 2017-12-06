@@ -480,6 +480,7 @@ article header,
 	display: inline-block;
 }
 
+.wp-post-image,
 .cat-links,
 .tags-links,
 .edit-link {
@@ -509,6 +510,10 @@ html {
 .site,
 textarea {
 	overflow: auto;
+}
+
+.entry-title {
+	z-index: 1;
 }
 
 /* ---------- Float Properties ---------- */
@@ -573,6 +578,7 @@ textarea {
 
 .site-header,
 .site-main,
+.entry-header,
 .site-footer {
 	display: grid;
 }
@@ -625,6 +631,16 @@ textarea {
 .blog .main-content {
 	display: grid;
 	grid-gap: 2em;
+}
+
+.entry-header {
+	grid-template-areas:
+	"entry-header";
+}
+
+.entry-title,
+.entry-title + a {
+	grid-area: entry-header;
 }
 
 .main-sidebar {
