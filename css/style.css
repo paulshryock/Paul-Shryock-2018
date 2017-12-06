@@ -89,9 +89,10 @@ figcaption {
 /* Text Decoration: Underline */
 
 .site-header a,
-.site-footer a,
+.entry-header a,
 .button,
-.comment-meta a {
+.comment-meta a,
+.site-footer a {
 	text-decoration: none;
 }
 
