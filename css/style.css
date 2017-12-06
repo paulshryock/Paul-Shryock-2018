@@ -419,6 +419,10 @@ figcaption:last-child,
 	margin: 0;
 }
 
+.blog .has-post-thumbnail .entry-title {
+	margin: 0.5em;
+}
+
 h1,
 h2,
 h3,
