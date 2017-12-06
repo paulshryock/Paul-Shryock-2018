@@ -368,7 +368,8 @@ button,
 	padding: 0.5em 1em;
 }
 
-.blog article,
+.blog .entry-title,
+.blog .entry-content,
 .comment {
 	padding: 1em;
 }
@@ -417,10 +418,6 @@ figcaption:last-child,
 .widget:last-child,
 .cta:last-child {
 	margin: 0;
-}
-
-.blog .has-post-thumbnail .entry-title {
-	margin: 0.5em;
 }
 
 h1,
