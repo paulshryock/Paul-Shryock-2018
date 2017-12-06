@@ -377,6 +377,10 @@ img {
 	padding: 0;
 }
 
+.menu-toggle {
+	padding: 0.25em 0.5em;
+}
+
 input,
 textarea {
 	padding: 0.5em;
