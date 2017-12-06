@@ -15,7 +15,8 @@ textarea {
 
 /* Font Size */
 
-.entry-footer {
+.entry-footer,
+.comment-meta {
 	font-size: 75%;
 }
 
@@ -89,8 +90,14 @@ figcaption {
 
 .site-header a,
 .site-footer a,
-.button {
+.button,
+.comment-meta a {
 	text-decoration: none;
+}
+
+.comment-meta a:hover,
+.comment-meta a:focus {
+	text-decoration: underline;
 }
 
 /* Text Transform: Uppercase */
@@ -125,7 +132,9 @@ ul ul {
 	list-style: square;
 }
 
-nav ul {
+nav ul,
+.comment-list,
+.comment-list .children {
 	list-style: none;
 }
 
@@ -137,7 +146,11 @@ body,
 .cta .button,
 .cta .button:active,
 .cta .button:hover,
-.cta .button:focus {
+.cta .button:focus,
+.comment-meta a,
+.comment-meta a:active,
+.comment-meta a:hover,
+.comment-meta a:focus {
 	color: #333;
 }
 
@@ -200,7 +213,8 @@ textarea {
 	border: .125em inset #eee;
 }
 
-.blog article {
+.blog article,
+.comment {
 	border: .125em solid #eee;
 }
 
@@ -328,6 +342,11 @@ img {
 
 /* Padding */
 
+.comment-list,
+.comment .children {
+	padding: 0;
+}
+
 input,
 textarea {
 	padding: 0.5em;
@@ -338,7 +357,8 @@ button,
 	padding: 0.5em 1em;
 }
 
-.blog article {
+.blog article,
+.comment {
 	padding: 1em;
 }
 
@@ -396,7 +416,10 @@ h4 {
 }
 
 .entry-footer,
-.post-navigation {
+.post-navigation,
+.comment + .comment,
+.comment-body + .children,
+.comment-meta + .comment-content {
 	margin: 1em 0 0;
 }
 
