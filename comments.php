@@ -31,13 +31,13 @@ if ( post_password_required() ) {
 			if ( 1 === $comment_count ) {
 				printf(
 					/* translators: 1: title. */
-					esc_html_e( 'One thought on &ldquo;%1$s&rdquo;', 'paul-shryock-2018' ),
+					esc_html_e( 'There is one thought on &ldquo;%1$s&rdquo;', 'paul-shryock-2018' ),
 					'<span>' . get_the_title() . '</span>'
 				);
 			} else {
 				printf( // WPCS: XSS OK.
 					/* translators: 1: comment count number, 2: title. */
-					esc_html( _nx( '%1$s thought on &ldquo;%2$s&rdquo;', '%1$s thoughts on &ldquo;%2$s&rdquo;', $comment_count, 'comments title', 'paul-shryock-2018' ) ),
+					esc_html( _nx( 'There is %1$s thought on &ldquo;%2$s&rdquo;', 'There are %1$s thoughts on &ldquo;%2$s&rdquo;', $comment_count, 'comments title', 'paul-shryock-2018' ) ),
 					number_format_i18n( $comment_count ),
 					'<span>' . get_the_title() . '</span>'
 				);
