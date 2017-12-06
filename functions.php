@@ -42,6 +42,8 @@ if ( ! function_exists( 'paul_shryock_2018_setup' ) ) :
 		 */
 		add_theme_support( 'post-thumbnails' );
 
+		set_post_thumbnail_size( 1600, 900, array( 'center', 'center')  ); // 1600 pixels wide by 900 pixels tall, crop from the center
+
 		/*
 		 * Enable support for Jetpack testimonials.
 		 */
@@ -88,6 +90,8 @@ if ( ! function_exists( 'paul_shryock_2018_setup' ) ) :
 	}
 endif;
 add_action( 'after_setup_theme', 'paul_shryock_2018_setup' );
+
+
 
 /**
  * Filter the except length to a modified number of words.
