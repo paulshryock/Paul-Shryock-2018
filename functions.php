@@ -90,6 +90,17 @@ endif;
 add_action( 'after_setup_theme', 'paul_shryock_2018_setup' );
 
 /**
+ * Filter the except length to a modified number of words.
+ *
+ * @param int $length Excerpt length.
+ * @return int (Maybe) modified excerpt length.
+ */
+function paul_shryock_2018_custom_excerpt_length( $length ) {
+    return 30;
+}
+add_filter( 'excerpt_length', 'paul_shryock_2018_custom_excerpt_length', 999 );
+
+/**
  * Set the content width in pixels, based on the theme's design and stylesheet.
  *
  * Priority 0 to make it available to lower priority callbacks.
