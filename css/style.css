@@ -246,7 +246,8 @@ textarea {
 .button:active,
 .button:hover,
 .button:focus,
-.cta {
+.cta,
+.entry-header a {
 	color: #fff;
 }
 
@@ -262,7 +263,8 @@ a:active {
 }
 
 .button,
-.cta {
+.cta,
+.entry-header a {
 	background: #0085ca;
 }
 
