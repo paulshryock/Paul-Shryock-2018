@@ -56,7 +56,7 @@ get_header(); ?>
 			if ( post_type_exists( 'jetpack-portfolio' ) && $project_query -> have_posts() ) :
 
 				while ( $project_query -> have_posts() ) : $project_query -> the_post();
-					get_template_part( 'content', 'portfolio' );
+					get_template_part( 'template-parts/content', 'project' );
 				endwhile;
 
 				paul_shryock_2018_paging_nav( $project_query->max_num_pages );
