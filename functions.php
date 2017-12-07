@@ -147,6 +147,15 @@ function paul_shryock_2018_scripts() {
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
+
+	wp_register_script( 'paul-shryock-2018-isotope', get_template_directory_uri() . '/js/isotope.pkgd.min.js', array( 'jquery' ), $version, true );
+	wp_register_script( 'paul-shryock-2018-portfolio', get_template_directory_uri() . '/js/portfolio.js', array( 'jquery' ), $version, true );
+	 
+	if ( is_page_template( 'homepage-template.php' ) ) {
+		wp_enqueue_script( 'paul-shryock-2018-isotope' );
+		wp_enqueue_script( 'paul-shryock-2018-portfolio' );
+	}
+
 }
 add_action( 'wp_enqueue_scripts', 'paul_shryock_2018_scripts' );
 
