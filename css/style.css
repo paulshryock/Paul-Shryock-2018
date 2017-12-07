@@ -229,6 +229,7 @@ textarea {
 }
 
 .blog article,
+.archive article,
 .comment {
 	border: .125em solid #eee;
 }
@@ -277,7 +278,9 @@ a:active {
 }
 
 .blog .entry-link:hover ~ * img,
-.blog .entry-link:focus ~ * img {
+.blog .entry-link:focus ~ * img,
+.archive .entry-link:hover ~ * img,
+.archive .entry-link:focus ~ * img {
 	-webkit-filter: sepia(1);
 	filter: sepia(1);
 }
@@ -393,11 +396,14 @@ button,
 
 .blog .entry-title,
 .blog .entry-content,
+.archive .entry-title,
+.archive .entry-content,
 .comment {
 	padding: 1em;
 }
 
-.blog .entry-header + .entry-content {
+.blog .entry-header + .entry-content,
+.archive .entry-header + .entry-content {
 	padding: 0 1em 1em;
 }
 
@@ -444,7 +450,8 @@ form:last-child,
 figcaption:last-child,
 .widget:last-child,
 .cta:last-child,
-.blog .entry-title {
+.blog .entry-title,
+.archive .entry-title {
 	margin: 0;
 }
 
@@ -478,6 +485,10 @@ article header,
 
 .comments-area {
 	margin: 2em 0 0;
+}
+
+.archive-description {
+	margin: 0 0 2em;
 }
 
 @media screen and (min-width: 37.5rem) { /* 600 px */
@@ -669,7 +680,8 @@ textarea {
 	grid-area: main-content;
 }
 
-.blog .main-content {
+.blog .main-content,
+.archive .main-content {
 	display: grid;
 	grid-gap: 2em;
 }
@@ -720,8 +732,14 @@ textarea {
 		grid-template-rows: 2em auto 2em auto 2em;
 	}
 
-	.blog .main-content {
+	.blog .main-content,
+	.archive .main-content {
 		grid-template-columns: repeat(2, 1fr);
+	}
+
+	.blog .page-header,
+	.archive .page-header {
+		grid-column: span 2;
 	}
 
 	.site-footer {
@@ -777,8 +795,14 @@ textarea {
 
 @media screen and (min-width: 75rem) { /* 1200 px */
 
-	.blog .main-content {
+	.blog .main-content,
+	.archive .main-content {
 		grid-template-columns: repeat(3, 1fr);
+	}
+
+	.blog .page-header,
+	.archive .page-header {
+		grid-column: span 3;
 	}
 
 }
