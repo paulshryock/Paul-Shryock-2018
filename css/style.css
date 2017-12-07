@@ -859,3 +859,79 @@ button {
   position: absolute;
   width: 1px;
 }
+
+
+
+/*
+ *
+ *
+ * Temporary portfolio project styles
+ *
+ *
+ */
+
+.portfolio-filter {
+  font-size: 14px;
+  font-size: 1.4rem;
+  overflow: hidden;
+  text-transform: uppercase;
+}
+ 
+.portfolio-filter ul {
+  margin: 0 0 2em;
+  padding: 0;
+  text-align: center;
+  width: 100%;
+}
+ 
+.portfolio-filter ul li {
+  background: #f0f0f0;
+  color: #999;
+  cursor: pointer;
+  display: inline-block;
+  list-style-type: none;
+  margin: 0 1em 1em 0;
+  padding: .2em .5em;
+  text-align: center;
+}
+ 
+.portfolio-filter ul li:first-child {
+  margin-right: .8em;
+}
+ 
+.portfolio-filter ul li:focus, .portfolio-filter ul li:hover {
+  color: #000;
+}
+ 
+.portfolio .type-jetpack-portfolio {
+  float: left;
+  margin: 0 -1px -1px 0;
+  width: 100%;
+}
+ 
+@media screen and (min-width: 480px) {
+  .portfolio .type-jetpack-portfolio {
+    max-width: 100%;
+    min-height: inherit;
+  }
+}
+ 
+@media screen and (min-width: 768px) {
+  .portfolio .type-jetpack-portfolio {
+    max-width: 239px;
+    max-height: 180px;
+  }
+}
+ 
+.portfolio .type-jetpack-portfolio img {
+  display: block;
+}
+ 
+.portfolio .type-jetpack-portfolio:hover {
+  background: #000;
+  opacity: .6;
+  transition: all .4s ease-in-out;
+  -webkit-transition: all .4s ease-in-out;
+  -moz-transition: all .4s ease-in-out;
+  -o-transition: all .4s ease-in-out;
+}
