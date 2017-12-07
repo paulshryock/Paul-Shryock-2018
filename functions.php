@@ -36,6 +36,11 @@ if ( ! function_exists( 'paul_shryock_2018_setup' ) ) :
 		add_theme_support( 'title-tag' );
 
 		/*
+		 * Allow shortcodes in all category, tag and custom taxonomy descriptions.
+		 */
+		add_filter( 'term_description', 'do_shortcode' );
+
+		/*
 		 * Enable support for Post Thumbnails on posts and pages.
 		 *
 		 * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
@@ -90,8 +95,6 @@ if ( ! function_exists( 'paul_shryock_2018_setup' ) ) :
 	}
 endif;
 add_action( 'after_setup_theme', 'paul_shryock_2018_setup' );
-
-
 
 /**
  * Filter the except length to a modified number of words.
