@@ -8,28 +8,13 @@
 get_header(); ?>
 
 	<section class="main-content">
-
-
 		
-		<?php if ( ! get_theme_mod( 'paul_shryock_2018_hide_portfolio_page_content' ) ) :
+		<?php
+		// Show page content
+		if ( ! get_theme_mod( 'paul_shryock_2018_hide_portfolio_page_content' ) ) :
 			while ( have_posts() ) : the_post();
-
-				the_title( '<header class="page-header"><h1 class="page-title">', '</h1></header>' ); ?>
-
-				<div class="page-content">
-					<?php
-						the_content();
-						wp_link_pages( array(
-							'before'      => '<div class="page-links"><span class="page-links-title">' . __( 'Pages:', 'paul_shryock_2018' ) . '</span>',
-							'after'       => '</div>',
-							'link_before' => '<span>',
-							'link_after'  => '</span>',
-						) );
-					?>
-				</div><!-- .page-content -->
-
-			<?php
-			endwhile; // end of the loop.
+				get_template_part( 'template-parts/content', 'page' );
+			endwhile; // End of the loop.
 		endif; ?>
 
 		<div class="portfolio-filter">
@@ -48,7 +33,7 @@ get_header(); ?>
 		</div><!-- .portfolio-filter -->
 
 		<div class="portfolio">
-				<?php
+			<?php
 						if ( get_query_var( 'paged' ) ) :
 								$paged = get_query_var( 'paged' );
 						elseif ( get_query_var( 'page' ) ) :
