@@ -49,18 +49,6 @@ if ( ! function_exists( 'paul_shryock_2018_setup' ) ) :
 
 		set_post_thumbnail_size( 1600, 900, array( 'center', 'center')  ); // 1600 pixels wide by 900 pixels tall, crop from the center
 
-		/*
-		 * Enable support for Jetpack testimonials.
-		 */
-		add_theme_support( 'jetpack-testimonial' );
-		add_post_type_support( 'jetpack-testimonial', 'excerpt' );
-
-		/*
-		 * Enable support for Jetpack portfolio.
-		 */
-		add_theme_support( 'jetpack-portfolio' );
-		add_post_type_support( 'jetpack-portfolio', 'excerpt' );
-
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus( array(
 			'menu-1' => esc_html__( 'Primary', 'paul-shryock-2018' ),
