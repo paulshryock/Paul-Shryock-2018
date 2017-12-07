@@ -42,6 +42,7 @@ function paul_shryock_2018_jetpack_setup() {
 	 */
 	add_theme_support( 'jetpack-testimonial' );
 	add_post_type_support( 'jetpack-testimonial', 'excerpt' );
+	add_post_type_support( 'jetpack-testimonial', 'custom-fields' );
 
 	/*
 	 * Enable support for Jetpack portfolio.
@@ -52,6 +53,7 @@ function paul_shryock_2018_jetpack_setup() {
 		'featured-image' => true,
 	) );
 	add_post_type_support( 'jetpack-portfolio', 'excerpt' );
+	add_post_type_support( 'jetpack-portfolio', 'custom-fields' );
 	
 }
 add_action( 'after_setup_theme', 'paul_shryock_2018_jetpack_setup' );
