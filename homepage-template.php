@@ -33,61 +33,59 @@ get_header(); ?>
 		</div><!-- .portfolio-filter -->
 
 		<div class="portfolio">
+			
 			<?php
-						if ( get_query_var( 'paged' ) ) :
-								$paged = get_query_var( 'paged' );
-						elseif ( get_query_var( 'page' ) ) :
-								$paged = get_query_var( 'page' );
-						else :
-								$paged = -1;
-						endif;
+			if ( get_query_var( 'paged' ) ) :
+				$paged = get_query_var( 'paged' );
+			elseif ( get_query_var( 'page' ) ) :
+				$paged = get_query_var( 'page' );
+			else :
+				$paged = -1;
+			endif;
 
-						$posts_per_page = get_option( 'jetpack_portfolio_posts_per_page', '-1' );
+			$posts_per_page = get_option( 'jetpack_portfolio_posts_per_page', '-1' );
 
-						$args = array(
-								'post_type'      => 'jetpack-portfolio',
-								'paged'          => $paged,
-								'posts_per_page' => $posts_per_page,
-						);
+			$args = array(
+				'post_type'      => 'jetpack-portfolio',
+				'paged'          => $paged,
+				'posts_per_page' => $posts_per_page,
+			);
 
-						$project_query = new WP_Query ( $args );
+			$project_query = new WP_Query ( $args );
 
-						if ( post_type_exists( 'jetpack-portfolio' ) && $project_query -> have_posts() ) :
+			if ( post_type_exists( 'jetpack-portfolio' ) && $project_query -> have_posts() ) :
 
-								while ( $project_query -> have_posts() ) : $project_query -> the_post();
+				while ( $project_query -> have_posts() ) : $project_query -> the_post();
+					get_template_part( 'content', 'portfolio' );
+				endwhile;
 
-										get_template_part( 'content', 'portfolio' );
+				paul_shryock_2018_paging_nav( $project_query->max_num_pages );
+				wp_reset_postdata();
 
-								endwhile;
+			else : ?>
 
-								paul_shryock_2018_paging_nav( $project_query->max_num_pages );
+				<section class="no-results not-found">
+					<header class="page-header">
+						<h1 class="page-title"><?php _e( 'No Project Found', 'paul_shryock_2018' ); ?></h1>
+					</header><!-- .page-header -->
 
-								wp_reset_postdata();
+					<div class="page-content">
+						<?php if ( current_user_can( 'publish_posts' ) ) : ?>
 
-						else :
-				?>
+							<p><?php printf( __( 'Ready to publish your first project? <a href="%1$s">Get started here</a>.', 'paul_shryock_2018' ), esc_url( admin_url( 'post-new.php?post_type=jetpack-portfolio' ) ) ); ?></p>
 
-						<section class="no-results not-found">
-								<header class="page-header">
-										<h1 class="page-title"><?php _e( 'No Project Found', 'paul_shryock_2018' ); ?></h1>
-								</header><!-- .page-header -->
+						<?php else : ?>
 
-								<div class="page-content">
-										<?php if ( current_user_can( 'publish_posts' ) ) : ?>
+							<p><?php _e( 'It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help.', 'paul_shryock_2018' ); ?></p>
 
-												<p><?php printf( __( 'Ready to publish your first project? <a href="%1$s">Get started here</a>.', 'paul_shryock_2018' ), esc_url( admin_url( 'post-new.php?post_type=jetpack-portfolio' ) ) ); ?></p>
+						<?php endif; ?>
+					</div><!-- .page-content -->
+				</section><!-- .no-results -->
 
-										<?php else : ?>
+			<?php
+			endif; ?>
 
-												<p><?php _e( 'It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help.', 'paul_shryock_2018' ); ?></p>
-
-										<?php endif; ?>
-								</div><!-- .page-content -->
-						</section><!-- .no-results -->
-				<?php endif; ?>
-				</div><!-- .portfolio -->
-
-
+		</div><!-- .portfolio -->
 
 	</section><!-- .main-content -->
 
