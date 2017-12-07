@@ -15,15 +15,11 @@
 get_header(); ?>
 
 	<section class="main-content">
-
-			<?php
-			while ( have_posts() ) : the_post();
-
-				get_template_part( 'template-parts/content', 'page' );
-
-			endwhile; // End of the loop.
-			?>
-
+		<?php
+		while ( have_posts() ) : the_post();
+			get_template_part( 'template-parts/content', 'page' );
+		endwhile; // End of the loop.
+		?>
 	</section><!-- .main-content -->
 
 <?php
