@@ -37,7 +37,8 @@ blockquote {
 	font-size: 125%;
 }
 
-h2 {
+h2,
+.archive-description {
 	font-size: 150%;
 }
 
