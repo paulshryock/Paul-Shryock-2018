@@ -475,7 +475,8 @@ ol,
 blockquote,
 form,
 figcaption,
-article header,
+.single article header,
+.page article header,
 .widget,
 .cta {
 	margin: 0 0 1em;
