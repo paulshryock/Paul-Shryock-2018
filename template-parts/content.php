@@ -13,10 +13,6 @@
 	<header class="entry-header">
 		<?php
 
-		if ( ! is_singular() ) :
-			echo '<a class="entry-link" href="' . esc_url( get_permalink() ) . '" rel="bookmark"></a>';
-		endif;
-
 		if ( is_singular() ) :
 			the_title( '<h1 class="entry-title">', '</h1>' );
 		else :
