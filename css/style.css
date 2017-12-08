@@ -398,8 +398,11 @@ button,
 }
 
 .blog .entry-title a,
+.blog .entry-content,
 .archive .entry-title a,
+.archive .entry-content,
 .search .entry-title a,
+.search .entry-content,
 .comment {
 	padding: 1em;
 }
