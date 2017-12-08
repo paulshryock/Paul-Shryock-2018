@@ -626,7 +626,6 @@ textarea {
 
 .site-header,
 .site-main,
-.entry-header,
 .site-footer {
 	display: grid;
 }
@@ -681,16 +680,6 @@ textarea {
 .search .main-content {
 	display: grid;
 	grid-gap: 2em;
-}
-
-.entry-header {
-	grid-template-areas:
-	"entry-header";
-}
-
-.entry-title,
-.entry-title + a {
-	grid-area: entry-header;
 }
 
 .main-sidebar {
