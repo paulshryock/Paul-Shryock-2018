@@ -16,7 +16,7 @@
 
 	<section class="entry-content">
 		<?php the_excerpt(); ?>
-	</section> --><!-- .entry-content -->
+	</section><!-- .entry-content -->
 
 	<!-- <footer class="entry-footer"> -->
 		<?php // paul_shryock_2018_entry_footer(); ?>
