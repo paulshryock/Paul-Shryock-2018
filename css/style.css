@@ -165,6 +165,12 @@ body,
 	color: #333;
 }
 
+.blog .entry-title,
+.archive .entry-title,
+.search .entry-title {
+	background: #333;
+}
+
 /* Dark Gray #666 */
 
 .button {
@@ -274,8 +280,7 @@ a:active {
 }
 
 .button,
-.cta,
-.entry-header a {
+.cta {
 	background: #0085ca;
 }
 
@@ -392,20 +397,11 @@ button,
 	padding: 0.5em 1em;
 }
 
-.blog .entry-title,
-.blog .entry-content,
-.archive .entry-title,
-.archive .entry-content,
-.search .entry-title,
-.search .entry-content,
+.blog .entry-title a,
+.archive .entry-title a,
+.search .entry-title a,
 .comment {
 	padding: 1em;
-}
-
-.blog .entry-header + .entry-content,
-.archive .entry-header + .entry-content,
-.search .entry-header + .entry-content {
-	padding: 0 1em 1em;
 }
 
 .main-sidebar,
@@ -526,7 +522,10 @@ article header,
 .wp-post-image,
 .cat-links,
 .tags-links,
-.edit-link {
+.edit-link,
+.blog .entry-title a,
+.archive .entry-title a,
+.search .entry-title a {
 	display: block;
 }
 
