@@ -165,12 +165,6 @@ body,
 	color: #333;
 }
 
-.blog .entry-title,
-.archive .entry-title,
-.search .entry-title {
-	background: #333;
-}
-
 /* Dark Gray #666 */
 
 .button {
@@ -218,43 +212,8 @@ blockquote {
 
 /* Lighter Gray #eee */
 
-input:disabled,
-button {
+.site {
 	background: #eee;
-}
-
-input:-moz-read-only {
-	background: #eee;
-}
-
-input:read-only {
-	background: #eee;
-}
-
-textarea {
-	border: .125em inset #eee;
-}
-
-.blog article,
-.archive article,
-.search article,
-.comment {
-	border: .125em solid #eee;
-}
-
-.main-sidebar,
-.entry-footer,
-.post-navigation {
-	border-top: 1px solid #eee;
-}
-
-@media screen and (min-width: 60rem) { /* 960 px */
-
-	.main-sidebar {
-		border-top: none;
-		border-left: 1px solid #eee;
-	}
-
 }
 
 /* White #fff */
@@ -263,13 +222,48 @@ textarea {
 .button:active,
 .button:hover,
 .button:focus,
-.cta,
-.entry-header a {
+.cta {
 	color: #fff;
 }
 
-.cta .button {
+.cta .button,
+button {
 	background: #fff;
+}
+
+input:disabled {
+	background: #fff;
+}
+
+input:-moz-read-only {
+	background: #fff;
+}
+
+input:read-only {
+	background: #fff;
+}
+
+textarea {
+	border: .125em inset #fff;
+}
+
+.comment {
+	border: .125em solid #fff;
+}
+
+.main-sidebar,
+.entry-footer,
+.post-navigation {
+	border-top: 1px solid #fff;
+}
+
+@media screen and (min-width: 60rem) { /* 960 px */
+
+	.main-sidebar {
+		border-top: none;
+		border-left: 1px solid #fff;
+	}
+
 }
 
 /* Blue #0085ca */
@@ -397,12 +391,6 @@ button,
 	padding: 0.5em 1em;
 }
 
-.blog .entry-title a,
-.blog .entry-content,
-.archive .entry-title a,
-.archive .entry-content,
-.search .entry-title a,
-.search .entry-content,
 .comment {
 	padding: 1em;
 }
@@ -449,10 +437,7 @@ blockquote:last-child,
 form:last-child,
 figcaption:last-child,
 .widget:last-child,
-.cta:last-child,
-.blog .entry-title,
-.archive .entry-title,
-.search .entry-title {
+.cta:last-child {
 	margin: 0;
 }
 
@@ -629,6 +614,7 @@ textarea {
 
 .site-header,
 .site-main,
+.blog .entry-header,
 .site-footer {
 	display: grid;
 }
@@ -683,6 +669,10 @@ textarea {
 .search .main-content {
 	display: grid;
 	grid-gap: 2em;
+}
+
+.blog .entry-title {
+	order: 2;
 }
 
 .main-sidebar {
