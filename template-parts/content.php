@@ -37,8 +37,8 @@ endif; ?>
 
 	<section class="entry-content">
 		<?php
-		if ( is_archive() ) :
-			the_excerpt( sprintf(
+		if ( is_single() ) :
+			the_content( sprintf(
 				wp_kses(
 					/* translators: %s: Name of current post. Only visible to screen readers */
 					__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'paul-shryock-2018' ),
@@ -51,7 +51,7 @@ endif; ?>
 				get_the_title()
 			) );
 		else :
-			the_content( sprintf(
+			the_excerpt( sprintf(
 				wp_kses(
 					/* translators: %s: Name of current post. Only visible to screen readers */
 					__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'paul-shryock-2018' ),
