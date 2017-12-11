@@ -7,9 +7,13 @@
  * @package Paul_Shryock_2018
  */
 
-?>
+if ( ! has_post_thumbnail()) :
+	$no_thumbnail = array(
+		'no-thumbnail',
+	);
+endif; ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class( $no_thumbnail ); ?>>
 	<header class="entry-header">
 		<?php
 

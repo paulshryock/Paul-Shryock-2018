@@ -221,7 +221,10 @@ blockquote {
 .button:hover,
 .button:focus,
 .cta,
-.more-link {
+.more-link,
+.more-link:active,
+.more-link:hover,
+.more-link:focus {
 	color: #fff;
 }
 
@@ -274,7 +277,8 @@ a:active {
 
 .button,
 .cta,
-.more-link {
+.more-link,
+.more-link:active {
 	background: #0085ca;
 }
 
@@ -311,6 +315,11 @@ a:focus,
 .cta a,
 .cta a:active {
 	color: #74d1ea;
+}
+
+.more-link:hover,
+.more-link:focus {
+	background: #74d1ea;
 }
 
 /* ---------- Box Model ---------- */
