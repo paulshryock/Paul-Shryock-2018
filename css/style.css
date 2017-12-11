@@ -507,10 +507,7 @@ figcaption,
 .wp-post-image,
 .cat-links,
 .tags-links,
-.edit-link,
-.blog .entry-title a,
-.archive .entry-title a,
-.search .entry-title a {
+.edit-link {
 	display: block;
 }
 
@@ -668,7 +665,7 @@ textarea {
 }
 
 .blog .entry-header {
-	grid-template-rows: auto 1em auto;
+	grid-gap: 1em;
 }
 
 .blog .entry-title {
