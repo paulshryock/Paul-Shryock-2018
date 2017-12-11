@@ -667,6 +667,10 @@ textarea {
 	grid-gap: 2em;
 }
 
+.blog .entry-header {
+	grid-template-rows: auto 1em auto;
+}
+
 .blog .entry-title {
 	order: 2;
 }

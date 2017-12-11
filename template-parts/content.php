@@ -23,7 +23,7 @@
 			if ( is_singular() ) :
 				the_post_thumbnail();
 			else :
-			echo '<a href="' . esc_url( get_permalink() ) . '" alt="' . get_the_title() . '">';
+			echo '<a class="entry-image-link" href="' . esc_url( get_permalink() ) . '" alt="' . get_the_title() . '">';
 				the_post_thumbnail();
 			echo '</a>';
 			endif;
