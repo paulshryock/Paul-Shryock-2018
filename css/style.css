@@ -101,7 +101,8 @@ figcaption {
 .entry-header a,
 .button,
 .comment-meta a,
-.site-footer a {
+.site-footer a,
+.more-link {
 	text-decoration: none;
 }
 
@@ -118,7 +119,8 @@ h3,
 h4,
 .site-header,
 button,
-.button {
+.button,
+.more-link {
 	text-transform: capitalize;
 }
 
@@ -218,7 +220,8 @@ blockquote {
 .button:active,
 .button:hover,
 .button:focus,
-.cta {
+.cta,
+.more-link {
 	color: #fff;
 }
 
@@ -270,7 +273,8 @@ a:active {
 }
 
 .button,
-.cta {
+.cta,
+.more-link {
 	background: #0085ca;
 }
 
@@ -383,7 +387,8 @@ textarea {
 }
 
 button,
-.button {
+.button,
+.more-link {
 	padding: 0.5em 1em;
 }
 
@@ -500,7 +505,8 @@ figcaption,
 
 /* ---------- Display Properties ---------- */
 
-.button {
+.button,
+.more-link {
 	display: inline-block;
 }
 
@@ -762,6 +768,12 @@ textarea {
 			". . ."
 			". main-content ."
 			". . .";
+	}
+
+	.blog .main-content,
+	.archive .main-content,
+	.search .main-content {
+		grid-gap: 3em;
 	}
 
 	.site-footer {
