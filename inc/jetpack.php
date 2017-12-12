@@ -71,3 +71,11 @@ function paul_shryock_2018_infinite_scroll_render() {
 		endif;
 	}
 }
+
+/**
+ * Development Mode.
+ */
+function paul_shryock_2018_jetpack_development_mode() {
+	add_filter( 'jetpack_development_mode', '__return_true' );
+}
+add_action( 'init', 'paul_shryock_2018_jetpack_development_mode' );
