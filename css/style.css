@@ -539,17 +539,24 @@ figcaption,
 
 /* ---------- Position Properties ---------- */
 
-.site-header {
+.site-header,
+.archive .jetpack-testimonial .entry-content p {
 	position: relative;
 }
 
-.menu-toggle {
+.menu-toggle,
+.archive .jetpack-testimonial .entry-content p::before {
 	position: absolute;
 }
 
 .menu-toggle {
 	top: 1em;
 	right: 1em;
+}
+
+.archive .jetpack-testimonial .entry-content p::before {
+	top: -1rem;
+	left: -1rem;
 }
 
 textarea {
