@@ -21,7 +21,7 @@
 
 	</header><!-- .entry-header -->
 
-	<section class="entry-content">
+	<blockquote class="entry-content">
 		<?php
 		if ( is_single() ) :
 			the_content( sprintf(
@@ -56,7 +56,7 @@
 			'after'  => '</div>',
 		) ); ?>
 
-	</section><!-- .entry-content -->
+	</blockquote><!-- .entry-content -->
 		
 	<?php
 	if ( is_singular() ) : ?>
