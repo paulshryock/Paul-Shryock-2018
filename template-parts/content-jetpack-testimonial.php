@@ -21,42 +21,46 @@
 
 	</header><!-- .entry-header -->
 
-	<blockquote class="entry-content">
-		<?php
-		if ( is_single() ) :
-			the_content( sprintf(
-				wp_kses(
-					/* translators: %s: Name of current post. Only visible to screen readers */
-					__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'paul-shryock-2018' ),
-					array(
-						'span' => array(
-							'class' => array(),
-						),
-					)
-				),
-				get_the_title()
-			) );
-		else :
-			the_excerpt( sprintf(
-				wp_kses(
-					/* translators: %s: Name of current post. Only visible to screen readers */
-					__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'paul-shryock-2018' ),
-					array(
-						'span' => array(
-							'class' => array(),
-						),
-					)
-				),
-				get_the_title()
-			) );
-		endif;
+	<section class="entry-content">
+		
+		<blockquote>
+			<?php
+			if ( is_single() ) :
+				the_content( sprintf(
+					wp_kses(
+						/* translators: %s: Name of current post. Only visible to screen readers */
+						__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'paul-shryock-2018' ),
+						array(
+							'span' => array(
+								'class' => array(),
+							),
+						)
+					),
+					get_the_title()
+				) );
+			else :
+				the_excerpt( sprintf(
+					wp_kses(
+						/* translators: %s: Name of current post. Only visible to screen readers */
+						__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'paul-shryock-2018' ),
+						array(
+							'span' => array(
+								'class' => array(),
+							),
+						)
+					),
+					get_the_title()
+				) );
+			endif; ?>
+		</blockquote>
 
+		<?php
 		wp_link_pages( array(
 			'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'paul-shryock-2018' ),
 			'after'  => '</div>',
 		) ); ?>
 
-	</blockquote><!-- .entry-content -->
+	</section><!-- .entry-content -->
 		
 	<?php
 	if ( is_singular() ) : ?>
