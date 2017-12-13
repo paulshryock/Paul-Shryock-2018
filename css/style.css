@@ -44,8 +44,7 @@ h2,
 }
 
 h1,
-.header-logo,
-.archive .jetpack-testimonial .entry-content p::before {
+.header-logo {
 	font-size: 200%;
 }
 
@@ -199,8 +198,7 @@ body,
 
 blockquote,
 figcaption,
-.site-footer,
-.archive .jetpack-testimonial .entry-content p::before {
+.site-footer {
 	color: #999;
 }
 
@@ -539,24 +537,17 @@ figcaption,
 
 /* ---------- Position Properties ---------- */
 
-.site-header,
-.archive .jetpack-testimonial .entry-content p {
+.site-header {
 	position: relative;
 }
 
-.menu-toggle,
-.archive .jetpack-testimonial .entry-content p::before {
+.menu-toggle {
 	position: absolute;
 }
 
 .menu-toggle {
 	top: 1em;
 	right: 1em;
-}
-
-.archive .jetpack-testimonial .entry-content p::before {
-	top: -1rem;
-	left: -1rem;
 }
 
 textarea {
@@ -885,10 +876,6 @@ button {
 
 .archive .jetpack-testimonial .entry-title::before {
 	content: '\2014';
-}
-
-.archive .jetpack-testimonial .entry-content p::before {
-	content: '\201C';
 }
 
 
