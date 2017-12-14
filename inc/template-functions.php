@@ -67,3 +67,27 @@ function paul_shryock_2018_archive_title( $title ) {
 	return $title;
 }
 add_filter( 'get_the_archive_title', 'paul_shryock_2018_archive_title' );
+
+/**
+ * If on a post type archive, use the post type archive content.
+ */
+function paul_shryock_2018_archive_content( $description ) {
+
+	if ( is_post_type_archive( 'jetpack-portfolio' ) ) {
+		$jetpack_portfolio_content = get_option( 'jetpack_portfolio_content' );
+		if ( isset( $jetpack_portfolio_content ) && '' != $jetpack_portfolio_content ) :
+			$description = convert_chars( convert_smilies( wptexturize( stripslashes( wp_filter_post_kses( addslashes( $jetpack_portfolio_content ) ) ) ) ) );
+		endif;
+	}
+
+	if ( is_post_type_archive( 'jetpack-testimonial' ) ) {
+		$jetpack_testimonials = get_theme_mod( 'jetpack_testimonials' )[ 'page-content' ];
+		$description = $jetpack_testimonials;
+		if ( isset( $jetpack_testimonials ) && '' != $jetpack_testimonials ) :
+			$description = convert_chars( convert_smilies( wptexturize( stripslashes( wp_filter_post_kses( addslashes( $jetpack_testimonials ) ) ) ) ) );
+		endif;
+	}
+
+	return $description;
+}
+add_filter( 'the_archive_description', 'paul_shryock_2018_archive_content' );
