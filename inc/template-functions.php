@@ -81,10 +81,10 @@ function paul_shryock_2018_archive_content( $description ) {
 	}
 
 	if ( is_post_type_archive( 'jetpack-testimonial' ) ) {
-		$jetpack_testimonials = get_theme_mod( 'jetpack_testimonials' )[ 'page-content' ];
-		$description = $jetpack_testimonials;
-		if ( isset( $jetpack_testimonials ) && '' != $jetpack_testimonials ) :
-			$description = convert_chars( convert_smilies( wptexturize( stripslashes( wp_filter_post_kses( addslashes( $jetpack_testimonials ) ) ) ) ) );
+		$jetpack_testimonials = get_theme_mod( 'jetpack_testimonials' );
+		$jetpack_testimonials_content = $jetpack_testimonials[ 'page-content' ];
+		if ( isset( $jetpack_testimonials_content ) && '' != $jetpack_testimonials_content ) :
+			$description = convert_chars( convert_smilies( wptexturize( stripslashes( wp_filter_post_kses( addslashes( $jetpack_testimonials_content ) ) ) ) ) );
 		endif;
 	}
 
