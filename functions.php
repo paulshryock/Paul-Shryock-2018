@@ -97,9 +97,20 @@ add_action( 'after_setup_theme', 'paul_shryock_2018_setup' );
  * @return int (Maybe) modified excerpt length.
  */
 function paul_shryock_2018_custom_excerpt_length( $length ) {
-    return 30;
+		return 30;
 }
 add_filter( 'excerpt_length', 'paul_shryock_2018_custom_excerpt_length', 999 );
+
+/**
+ * If on a post type archive, use the post type archive title.
+ */
+function paul_shryock_2018_archive_title( $title ) {
+	if ( is_post_type_archive() ) {
+		$title = post_type_archive_title( '', false );
+	}
+	return $title;
+}
+add_filter( 'get_the_archive_title', 'paul_shryock_2018_archive_title' );
 
 /**
  * Set the content width in pixels, based on the theme's design and stylesheet.
