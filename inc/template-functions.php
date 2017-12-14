@@ -90,4 +90,4 @@ function paul_shryock_2018_archive_content( $description ) {
 
 	return $description;
 }
-add_filter( 'the_archive_description', 'paul_shryock_2018_archive_content' );
+add_filter( 'get_the_archive_description', 'paul_shryock_2018_archive_content' );
