@@ -24,7 +24,7 @@ if ( $terms && ! is_wp_error( $terms ) ) :
 <article id="post-<?php the_ID(); ?>" <?php post_class( $filtering ); ?>>
 	<a href="<?php the_permalink(); ?>" rel="bookmark" class="image-link" tabindex="-1">
 		<?php  if ( '' != get_the_post_thumbnail() ) : ?>
-			<?php the_post_thumbnail( 'wds-portfolio-img' ); ?>
+			<?php the_post_thumbnail(); ?>
 		<?php endif; ?>
 	</a>
 </article><!-- #post-## -->

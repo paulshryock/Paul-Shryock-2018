@@ -63,14 +63,14 @@ get_header(); ?>
 					 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
 					 */
 					$post_suffix = get_post_format();
-					if ( is_post_type_archive( 'jetpack-testimonial' ) || is_post_type_archive( 'jetpack-portfolio' ) ) :
+					// if ( is_post_type_archive( 'jetpack-testimonial' ) || is_post_type_archive( 'jetpack-portfolio' ) ) :
 						$post_suffix = get_post_type();
-					endif;
+					// endif;
 					get_template_part( 'template-parts/content', $post_suffix );
 				
 				endwhile;
 
-				paul_shryock_2018_paging_nav( $project_query->max_num_pages );
+				// paul_shryock_2018_paging_nav( $project_query->max_num_pages );
 				wp_reset_postdata();
 
 			else : ?>
