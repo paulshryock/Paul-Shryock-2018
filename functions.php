@@ -141,6 +141,7 @@ function paul_shryock_2018_scripts() {
 	wp_register_script( 'paul-shryock-2018-portfolio', get_template_directory_uri() . '/js/portfolio.js', array( 'jquery' ), false, true );
 	 
 	if ( is_page_template( 'homepage-template.php' ) ) {
+		wp_enqueue_style( 'paul-shryock-2018-portfolio-css', get_template_directory_uri() . '/css/portfolio.css' );
 		wp_enqueue_script( 'paul-shryock-2018-isotope' );
 		wp_enqueue_script( 'paul-shryock-2018-portfolio' );
 	}
