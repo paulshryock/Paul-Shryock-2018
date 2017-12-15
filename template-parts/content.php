@@ -9,7 +9,7 @@
 
 $thumbnail = '';
 
-if ( ! has_post_thumbnail()) :
+if ( ! has_post_thumbnail() ) :
 	$thumbnail = array(
 		'no-thumbnail',
 	);
