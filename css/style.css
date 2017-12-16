@@ -220,6 +220,46 @@ blockquote {
 
 /* Lighter Gray #eee */
 
+.cta .button,
+button {
+	background: #eee;
+}
+
+input:disabled {
+	background: #eee;
+}
+
+input:-moz-read-only {
+	background: #eee;
+}
+
+input:read-only {
+	background: #eee;
+}
+
+textarea {
+	border: .125em inset #eee;
+}
+
+.comment {
+	border: .125em solid #eee;
+}
+
+.main-sidebar,
+.entry-footer,
+.post-navigation {
+	border-top: 1px solid #eee;
+}
+
+@media screen and (min-width: 60rem) { /* 960 px */
+
+	.main-sidebar {
+		border-top: none;
+		border-left: 1px solid #eee;
+	}
+
+}
+
 /* White #fff */
 
 .button,
@@ -232,46 +272,6 @@ blockquote {
 .more-link:hover,
 .more-link:focus {
 	color: #fff;
-}
-
-.cta .button,
-button {
-	background: #fff;
-}
-
-input:disabled {
-	background: #fff;
-}
-
-input:-moz-read-only {
-	background: #fff;
-}
-
-input:read-only {
-	background: #fff;
-}
-
-textarea {
-	border: .125em inset #fff;
-}
-
-.comment {
-	border: .125em solid #fff;
-}
-
-.main-sidebar,
-.entry-footer,
-.post-navigation {
-	border-top: 1px solid #fff;
-}
-
-@media screen and (min-width: 60rem) { /* 960 px */
-
-	.main-sidebar {
-		border-top: none;
-		border-left: 1px solid #fff;
-	}
-
 }
 
 /* Blue #0085ca */
