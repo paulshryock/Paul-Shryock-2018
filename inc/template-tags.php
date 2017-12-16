@@ -63,23 +63,21 @@ if ( ! function_exists( 'paul_shryock_2018_entry_footer' ) ) :
 			}
 		}
 
-		if ( ! is_single() && ! post_password_required() && ( comments_open() || get_comments_number() ) ) {
-			echo '<span class="comments-link">';
-			comments_popup_link(
-				sprintf(
-					wp_kses(
-						/* translators: %s: post title */
-						__( 'Leave a Comment<span class="screen-reader-text"> on %s</span>', 'paul-shryock-2018' ),
-						array(
-							'span' => array(
-								'class' => array(),
-							),
-						)
-					),
-					get_the_title()
-				)
-			);
-			echo '</span>';
+		if ( 'jetpack-portfolio' === get_post_type() ) {
+			/* translators: used between list items, there is a space after the comma */
+			// $categories_list = get_the_category_list( esc_html__( ', ', 'paul-shryock-2018' ) );
+			$portfolio_type = the_terms( get_the_id(), 'jetpack-portfolio-type' );
+			if ( $portfolio_type ) {
+				/* translators: 1: list of categories. */
+				printf( '<span class="cat-links">' . esc_html__( 'Posted in %1$s', 'paul-shryock-2018' ) . '</span>', $portfolio_type ); // WPCS: XSS OK.
+			}
+
+			/* translators: used between list items, there is a space after the comma */
+			$tags_list = get_the_tag_list( '', esc_html_x( ', ', 'list item separator', 'paul-shryock-2018' ) );
+			if ( $tags_list ) {
+				/* translators: 1: list of tags. */
+				printf( '<span class="tags-links">' . esc_html__( 'Tagged %1$s', 'paul-shryock-2018' ) . '</span>', $tags_list ); // WPCS: XSS OK.
+			}
 		}
 
 		edit_post_link(
