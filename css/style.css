@@ -58,7 +58,8 @@ h1,
 
 @media screen and (min-width: 37.5rem) { /* 600 px */
 
-	.blog .entry-title {
+	.blog .entry-title,
+	.archive .entry-title {
 		font-size: 112.5%;
 	}
 
@@ -632,6 +633,7 @@ textarea {
 .site-header,
 .site-main,
 .blog .entry-header,
+.archive .entry-header,
 .archive .jetpack-testimonial,
 .site-footer {
 	display: grid;
@@ -690,11 +692,13 @@ textarea {
 }
 
 .blog .entry-header,
+.archive .entry-header,
 .archive .jetpack-testimonial {
 	grid-gap: 1em;
 }
 
 .blog .entry-title,
+.archive .entry-title,
 .archive .jetpack-testimonial .entry-header {
 	order: 2;
 }
