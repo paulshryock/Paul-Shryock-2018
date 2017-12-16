@@ -28,10 +28,10 @@ endif; ?>
 		if ( has_post_thumbnail() ) :
 			if ( is_singular() ) :
 				the_post_thumbnail();
-			elseif ( ! is_archive( 'jetpack-testimonial' ) ) :
-			echo '<a class="entry-image-link" href="' . esc_url( get_permalink() ) . '" alt="' . get_the_title() . '">';
-				the_post_thumbnail();
-			echo '</a>';
+			else :
+				echo '<a class="entry-image-link" href="' . esc_url( get_permalink() ) . '" alt="' . get_the_title() . '">';
+					the_post_thumbnail();
+				echo '</a>';
 			endif;
 		endif; ?>
 
