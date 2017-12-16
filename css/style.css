@@ -251,6 +251,10 @@ textarea {
 	border-top: 1px solid #eee;
 }
 
+.archive .jetpack-portfolio .entry-footer {
+	border-top: none;
+}
+
 @media screen and (min-width: 60rem) { /* 960 px */
 
 	.main-sidebar {
@@ -388,7 +392,8 @@ img {
 
 .widget ul,
 .comment-list,
-.comment .children {
+.comment .children,
+.archive .jetpack-portfolio .entry-footer {
 	padding: 0;
 }
 
@@ -453,7 +458,8 @@ blockquote:last-child,
 form:last-child,
 figcaption:last-child,
 .widget:last-child,
-.cta:last-child {
+.cta:last-child,
+.archive .jetpack-portfolio .entry-footer {
 	margin: 0;
 }
 
