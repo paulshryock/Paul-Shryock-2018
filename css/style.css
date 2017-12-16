@@ -126,7 +126,8 @@ h4,
 .site-header,
 button,
 .button,
-.more-link {
+.more-link,
+.jetpack-portfolio .tags-links {
 	text-transform: capitalize;
 }
 
