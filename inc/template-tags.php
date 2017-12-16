@@ -65,16 +65,16 @@ if ( ! function_exists( 'paul_shryock_2018_entry_footer' ) ) :
 
 		if ( 'jetpack-portfolio' === get_post_type() ) {
 
-			$portfolio_types = the_terms( get_the_id(), 'jetpack-portfolio-type' );
+			$portfolio_types = get_the_term_list( get_the_id(), 'jetpack-portfolio-type', '', ', ', '' );
 			if ( $portfolio_types ) {
-				/* translators: 1: portfolio types. */
-				printf( '<span class="cat-links">' . esc_html__( '%1$s', 'paul-shryock-2018' ) . '</span>', $portfolio_types ); // WPCS: XSS OK.
+				 // translators: 1: portfolio types. 
+				printf( '<span class="cat-links">' . esc_html__( 'Discipline: %1$s', 'paul-shryock-2018' ) . '</span>', $portfolio_types ); // WPCS: XSS OK.
 			}
 
-			$portfolio_tags = the_terms( get_the_id(), 'jetpack-portfolio-tag' );
+			$portfolio_tags = get_the_term_list( get_the_id(), 'jetpack-portfolio-tag', '', ', ', '' );
 			if ( $portfolio_tags ) {
 				/* translators: 1: portfolio tags. */
-				printf( '<span class="tags-links">' . esc_html__( '%1$s', 'paul-shryock-2018' ) . '</span>', $portfolio_tags ); // WPCS: XSS OK.
+				printf( '<span class="tags-links">' . esc_html__( 'Deliverable: %1$s', 'paul-shryock-2018' ) . '</span>', $portfolio_tags ); // WPCS: XSS OK.
 			}
 		}
 
