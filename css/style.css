@@ -39,7 +39,8 @@ blockquote {
 }
 
 h2,
-.archive-description {
+.archive-description,
+.site-hero {
 	font-size: 150%;
 }
 
