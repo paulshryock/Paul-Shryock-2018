@@ -51,4 +51,5 @@
 				?>
 			</nav><!-- .header-nav -->
 		</header><!-- .site-header -->
+		<?php get_sidebar( 'hero' ); ?>
 		<main class="site-main">
