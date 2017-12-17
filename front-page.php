@@ -15,15 +15,22 @@
 get_header(); ?>
 
 	<section class="main-content">
+
 		<?php
+		$args = array(
+			'post_type' => 'post',
+			'posts_per_page' => 3,
+		);
+		$latest_blog_posts = new WP_Query( $args );
+		if ( $latest_blog_posts->have_posts() ) : while ( $latest_blog_posts->have_posts() ) : $latest_blog_posts->the_post();
+			get_template_part( 'template-parts/content', get_post_format() );
+			wp_reset_postdata();
+		endwhile; endif;
+
 		while ( have_posts() ) : the_post();
 			get_template_part( 'template-parts/content', 'page' );
 		endwhile; // End of the loop.
-
-		$latest_blog_posts = new WP_Query( array( 'posts_per_page' => 3 ) );
-		if ( $latest_blog_posts->have_posts() ) : while ( $latest_blog_posts->have_posts() ) : $latest_blog_posts->the_post();
-			get_template_part( 'template-parts/content', get_post_format() );
-		endwhile; endif; ?>
+		?>
 		
 	</section><!-- .main-content -->
 
