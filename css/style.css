@@ -133,6 +133,10 @@ button,
 
 /* Text Alignment */
 
+.site-hero {
+	text-align: center;
+}
+
 /* List Styles */
 
 ol {
@@ -222,7 +226,8 @@ blockquote {
 /* Lighter Gray #eee */
 
 .cta .button,
-button {
+button,
+.site-hero {
 	background: #eee;
 }
 
@@ -671,8 +676,8 @@ textarea {
 }
 
 .site-hero {
-	grid-template-columns: 1fr auto 1fr;
-	grid-template-rows: 2em auto 2em;
+	grid-template-columns: 1em 1fr 1em;
+	grid-template-rows: 3em auto 3em;
 	grid-template-areas:
 	". . ."
 	". hero-content ."
@@ -755,6 +760,10 @@ textarea {
 			". . . . .";
 	}
 
+	.site-hero {
+		grid-template-columns: 2em 1fr 2em;
+	}
+
 	.site-main {
 		grid-template-columns: 2em 1fr 2em;
 		grid-template-rows: 2em auto 2em auto 2em;
@@ -784,6 +793,10 @@ textarea {
 	.site-header {
 		grid-template-columns: 3em auto 3em auto 3em;
 		grid-template-rows: 3em auto 3em;
+	}
+
+	.site-hero {
+		grid-template-columns: 3em auto 3em;
 	}
 
 	.site-main {
@@ -849,6 +862,10 @@ textarea {
 
 	.site-header {
 		grid-template-columns: 1fr minmax( 24em, auto ) 3em minmax( 24em, 36em ) 1fr;
+	}
+
+	.site-hero {
+		grid-template-columns: 1fr 63em 1fr;
 	}
 
 	.site-main {
