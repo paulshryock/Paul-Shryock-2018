@@ -117,6 +117,15 @@ function paul_shryock_2018_widgets_init() {
 		'before_title'  => '<header><h2 class="widget-title">',
 		'after_title'   => '</h2></header>',
 	) );
+	register_sidebar( array(
+		'name'          => esc_html__( 'Hero', 'paul-shryock-2018' ),
+		'id'            => 'sidebar-hero',
+		'description'   => esc_html__( 'Add widgets here.', 'paul-shryock-2018' ),
+		'before_widget' => '<section id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</section>',
+		'before_title'  => '<header><h2 class="widget-title">',
+		'after_title'   => '</h2></header>',
+	) );
 }
 add_action( 'widgets_init', 'paul_shryock_2018_widgets_init' );
 
