@@ -7,6 +7,10 @@
  * @package Paul_Shryock_2018
  */
 
+if ( ! is_front_page() ) {
+	return;
+}
+
 if ( ! is_active_sidebar( 'sidebar-hero' ) ) {
 	return;
 }
