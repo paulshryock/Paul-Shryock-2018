@@ -678,7 +678,7 @@ textarea {
 		". . .";
 }
 
-.site-main.has-sidebar {
+.has-sidebar .site-main {
 	grid-template-areas:
 		". . ."
 		". main-content ."
@@ -777,7 +777,7 @@ textarea {
 		grid-template-rows: 3em auto 3em;
 	}
 
-	.site-main.content-thin {
+	.content-thin .site-main {
 		grid-template-columns: 1fr 36em 1fr;
 	}
 
@@ -788,14 +788,14 @@ textarea {
 			". . . . .";
 	}
 
-	.site-main.has-sidebar {
+	.has-sidebar .site-main {
 		grid-template-areas:
 			". . . . ."
 			". main-content . main-sidebar ."
 			". . . . .";
 	}
 
-	.site-main.content-thin {
+	.content-thin .site-main {
 		grid-template-areas:
 			". . ."
 			". main-content ."

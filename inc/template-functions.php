@@ -17,6 +17,14 @@ function paul_shryock_2018_body_classes( $classes ) {
 		$classes[] = 'hfeed';
 	}
 
+	if ( is_single() ) {
+		$classes[] = 'has-sidebar';
+	}
+
+	if ( is_page() ) {
+		$classes[] = 'content-thin';
+	}
+
 	return $classes;
 }
 add_filter( 'body_class', 'paul_shryock_2018_body_classes' );
