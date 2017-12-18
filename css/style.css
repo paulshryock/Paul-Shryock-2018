@@ -181,26 +181,6 @@ body,
 
 /* Dark Gray #666 */
 
-.button {
-	border-right: 0.125em solid #666;
-	border-bottom: 0.125em solid #666;
-}
-
-.button:active {
-	border-top: 0.125em solid #666;
-	border-right: none;
-	border-bottom: none;
-	border-left: 0.125em solid #666;
-}
-
-.search input[type="search"] {
-	border-right: none;
-}
-
-.search input[type="search"] + button {
-	border-left: none;
-}
-
 /* Medium Gray #999 */
 
 blockquote,
@@ -258,14 +238,9 @@ textarea {
 	border-top: 1px solid #eee;
 }
 
-.archive .jetpack-portfolio .entry-footer {
-	border-top: none;
-}
-
 @media screen and (min-width: 60rem) { /* 960 px */
 
 	.main-sidebar {
-		border-top: none;
 		border-left: 1px solid #eee;
 	}
 
@@ -283,6 +258,20 @@ textarea {
 .more-link:hover,
 .more-link:focus {
 	color: #fff;
+}
+
+/* Dark Blue #069 */
+
+.button {
+	border-right: 0.125em solid #069;
+	border-bottom: 0.125em solid #069;
+}
+
+.button:active {
+	border-top: 0.125em solid #069;
+	border-right: none;
+	border-bottom: none;
+	border-left: 0.125em solid #069;
 }
 
 /* Blue #0085ca */
@@ -327,6 +316,28 @@ a:focus,
 .more-link:hover,
 .more-link:focus {
 	background: #74d1ea;
+}
+
+/* Colorless / Transparent */
+
+.archive .jetpack-portfolio .entry-footer {
+	border-top: none;
+}
+
+.search input[type="search"] {
+	border-right: none;
+}
+
+.search input[type="search"] + button {
+	border-left: none;
+}
+
+@media screen and (min-width: 60rem) { /* 960 px */
+
+	.main-sidebar {
+		border-top: none;
+	}
+
 }
 
 /* ---------- Box Model ---------- */
