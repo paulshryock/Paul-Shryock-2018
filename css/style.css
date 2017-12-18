@@ -299,16 +299,6 @@ a:active {
 	background: #0085ca;
 }
 
-.blog .entry-header:hover img,
-.blog .entry-header:focus img,
-.archive .entry-header:hover img,
-.archive .entry-header:focus img,
-.search .entry-header:hover img,
-.search .entry-header:focus img {
-	-webkit-filter: sepia(1);
-	filter: sepia(1);
-}
-
 :focus {
 	outline: #0085ca solid 0.125rem; /* 2 px */
 }
@@ -879,7 +869,17 @@ textarea {
 
 }
 
-/* ---------- Animated Transitions ---------- */
+/* ---------- Filters and Transitions ---------- */
+
+.blog .entry-header:hover img,
+.blog .entry-header:focus img,
+.archive .entry-header:hover img,
+.archive .entry-header:focus img,
+.search .entry-header:hover img,
+.search .entry-header:focus img {
+	-webkit-filter: sepia(1);
+	filter: sepia(1);
+}
 
 a {
 	transition: color 0.25s ease;
