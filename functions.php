@@ -175,17 +175,3 @@ require get_template_directory() . '/inc/customizer.php';
 if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
-
-
-
-
-function paul_shryock_2018_rest_test() {
-	return "Test content";
-}
-
-add_action( 'rest_api_init', function () {
-	register_rest_route( 'paul_shryock_2018/v1', '/test/', array(
-		'methods' => 'GET',
-		'callback' => 'paul_shryock_2018_rest_test'
-	) );
-} );
