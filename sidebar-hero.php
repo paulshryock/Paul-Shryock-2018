@@ -20,4 +20,7 @@ if ( ! is_active_sidebar( 'sidebar-hero' ) ) {
 	<div class="hero-content">
 		<?php dynamic_sidebar( 'sidebar-hero' ); ?>
 	</div><!-- .hero-content -->
+	<div class="hero-clients">
+		<?php dynamic_sidebar( 'sidebar-hero-clients' ); ?>
+	</div><!-- .hero-clients -->
 </section><!-- .site-hero -->
