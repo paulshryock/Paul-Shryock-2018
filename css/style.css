@@ -176,7 +176,11 @@ body,
 .comment-meta a:active,
 .comment-meta a:hover,
 .comment-meta a:focus,
-.hero-clients {
+.hero-clients,
+.hero-content .button,
+.hero-content .button:active,
+.hero-content .button:hover,
+.hero-content .button:focus {
 	color: #333;
 }
 
@@ -260,6 +264,13 @@ textarea {
 .more-link:focus,
 .site-hero {
 	color: #fff;
+}
+
+.hero-content .button
+.hero-content .button:active
+.hero-content .button:hover
+.hero-content .button:focus {
+	background: #fff;
 }
 
 /* Dark Blue #069 */
