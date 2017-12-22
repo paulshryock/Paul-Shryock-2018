@@ -176,7 +176,6 @@ body,
 .comment-meta a:active,
 .comment-meta a:hover,
 .comment-meta a:focus,
-.hero-clients,
 .hero-content .button,
 .hero-content .button:active,
 .hero-content .button:hover,
@@ -190,6 +189,7 @@ body,
 
 blockquote,
 figcaption,
+.hero-clients,
 .site-footer {
 	color: #999;
 }
