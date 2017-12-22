@@ -686,6 +686,15 @@ textarea {
 	". . .";
 }
 
+.site-hero.has-clients {
+	grid-template-rows: 3em auto 3em auto;
+	grid-template-areas:
+	". . ."
+	". hero-content ."
+	". . ."
+	"hero-clients";
+}
+
 .hero-content {
 	grid-area: hero-content;
 }
