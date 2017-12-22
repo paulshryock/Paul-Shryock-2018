@@ -692,11 +692,15 @@ textarea {
 	". . ."
 	". hero-content ."
 	". . ."
-	"hero-clients";
+	"hero-clients hero-clients hero-clients";
 }
 
 .hero-content {
 	grid-area: hero-content;
+}
+
+.hero-clients {
+	grid-area: hero-clients;
 }
 
 .site-main {

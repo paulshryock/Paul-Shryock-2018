@@ -16,7 +16,7 @@ if ( ! is_active_sidebar( 'sidebar-hero' ) ) {
 }
 ?>
 
-<section class="site-hero">
+<section class="site-hero<?php if ( is_active_sidebar( 'sidebar-hero-clients' ) ) { echo ' has-clients'; } ?>">
 	<div class="hero-content">
 		<?php dynamic_sidebar( 'sidebar-hero' ); ?>
 	</div><!-- .hero-content -->
