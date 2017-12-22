@@ -266,9 +266,9 @@ textarea {
 	color: #fff;
 }
 
-.hero-content .button
-.hero-content .button:active
-.hero-content .button:hover
+.hero-content .button,
+.hero-content .button:active,
+.hero-content .button:hover,
 .hero-content .button:focus {
 	background: #fff;
 }
