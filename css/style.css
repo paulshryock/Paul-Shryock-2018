@@ -175,7 +175,8 @@ body,
 .comment-meta a,
 .comment-meta a:active,
 .comment-meta a:hover,
-.comment-meta a:focus {
+.comment-meta a:focus,
+.hero-clients {
 	color: #333;
 }
 
@@ -208,7 +209,7 @@ blockquote {
 
 .cta .button,
 button,
-.site-hero {
+.hero-clients {
 	background: #eee;
 }
 
@@ -256,7 +257,8 @@ textarea {
 .more-link,
 .more-link:active,
 .more-link:hover,
-.more-link:focus {
+.more-link:focus,
+.site-hero {
 	color: #fff;
 }
 
@@ -284,7 +286,8 @@ a:active {
 .button,
 .cta,
 .more-link,
-.more-link:active {
+.more-link:active,
+.site-hero {
 	background: #0085ca;
 }
 
@@ -420,7 +423,8 @@ button,
 	padding: 0.5em 1em;
 }
 
-.comment {
+.comment,
+.hero-clients {
 	padding: 1em;
 }
 
@@ -441,6 +445,10 @@ blockquote {
 }
 
 @media screen and (min-width: 48rem) { /* 768 px */
+
+	.hero-clients {
+		padding: 2em;
+	}
 
 	.main-sidebar {
 		padding: 2em 0 0;
