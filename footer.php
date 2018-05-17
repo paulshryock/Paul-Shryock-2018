@@ -14,7 +14,7 @@
 		</main><!-- .site-main -->
 		<footer id="colophon" class="site-footer" role="contentinfo">
 			<div class="footer-content">
-				<p class="copyright">© 2009–2017 <?php bloginfo( 'name' ); ?>. All Rights Reserved.</p>
+				<p class="copyright">© <?php echo date("Y"); ?> <?php bloginfo( 'name' ); ?>. All Rights Reserved.</p>
 			</div><!-- .footer-content -->
 		</footer><!-- .site-footer -->
 		<?php wp_footer(); ?>
